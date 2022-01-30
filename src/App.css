@@ -1,38 +1,104 @@
-.App {
+/*
+Variables
+*/
+/*
+App Component
+*/
+* {
+  font-family: Verdana, sans-serif;
+}
+.mainContainer {
+  background: #edf6fb;
+  height: 100vh;
+}
+/*
+  Weather Component
+*/
+.citiesRow {
+  padding-top: 50px;
+  padding-bottom: 20px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cityContentRow {
+  text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tabItem,
+.itemActive {
+  padding: 8px 20px !important;
+  color: black !important;
+  font-size: 1.6rem !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.itemActive {
+  font-weight: bold !important;
+  color: #32a2e2 !important;
+}
+.todayWeatherItem {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.cardItem {
+  background: #edf6fb;
+  padding: 20px 0px;
+  margin: 0px 6px 6px 0px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*
+ WeatherCard Component
+*/
+.cardBox {
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.13);
+  border-radius: 10px;
+  height: 100%;
+  background-color: white;
+}
+.cardItemToday {
+  background: #edf6fb;
+  width: 100%;
+  height: 100%;
+  padding: 50px 0px;
+  margin: 6px !important;
+  border-radius: 10px 10px 0px 0px;
+}
+/*
+ WeatherItem Component
+*/
+.MuiGrid-item:nth-child(2) .cardItem {
+  margin: 0px 6px 6px 6px !important;
+  border-bottom-left-radius: 10px;
+}
+.MuiGrid-item:nth-child(5) .cardItem {
+  border-bottom-right-radius: 10px;
+}
+.weather-icon {
+  color: #41c4ff;
+  font-size: 3.5rem;
+  padding: 20px 0px;
+}
+.weather-temp {
+  font-size: 2rem;
+}
+.weather-icon-lg {
+  color: #41c4ff;
+  font-size: 8rem;
+  padding: 20px;
+}
+.todayHead {
+  font-size: 2.5rem !important;
+}
+.otherHeads {
+  font-size: 1.5rem !important;
+}
+.todayInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todayTemp {
+  font-size: 5rem;
+  font-weight: bold;
+}
+.currentWeather {
+  font-size: 2rem;
+  padding-left: 2%;
 }

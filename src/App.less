@@ -1,0 +1,117 @@
+/*
+Variables
+*/
+@bg-color: rgb(237 246 251);
+@active-color: rgb(50, 162, 226);
+@font-family: Verdana, sans-serif;
+/*
+App Component
+*/
+* {
+    font-family: @font-family;
+}
+.border-radius(@radius) {
+    border-radius: @radius;
+}
+.text-align(@position) {
+    text-align: @position;
+}
+.mainContainer {
+    background: @bg-color;
+    height: 100vh;
+}
+
+/*
+  Weather Component
+*/
+.citiesRow {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    .text-align(center);
+}
+.cityContentRow {
+    .text-align(center);
+}
+.tabItem {
+    padding: 8px 20px !important;
+    color: black !important;
+    font-size: 1.6rem !important;
+}
+.itemActive:extend(.tabItem) {
+    font-weight: bold !important;
+    color: @active-color!important;
+}
+
+.todayWeatherItem {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cardItem {
+    background: @bg-color;
+    padding: 20px 0px;
+    margin: 0px 6px 6px 0px;
+}
+
+/*
+ WeatherCard Component
+*/
+.cardBox {
+    box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 13%);
+    .border-radius(10px);
+    height: 100%;
+    background-color: white;
+}
+.cardItemToday {
+    background: @bg-color;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0px;
+    margin: 6px !important;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/*
+ WeatherItem Component
+*/
+.MuiGrid-item:nth-child(2) .cardItem {
+    margin: 0px 6px 6px 6px !important;
+    border-bottom-left-radius: 10px;
+}
+.MuiGrid-item:nth-child(5) .cardItem {
+    border-bottom-right-radius: 10px;
+}
+.weather-icon {
+    color: #41c4ff;
+    font-size: 3.5rem;
+    padding: 20px 0px;
+}
+.weather-temp {
+    font-size: 2rem;
+}
+.weather-icon-lg {
+    color: #41c4ff;
+    font-size: 8rem;
+    padding: 20px;
+}
+.todayHead {
+    font-size: 2.5rem !important;
+}
+.otherHeads {
+    font-size: 1.5rem !important;
+}
+.todayInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todayTemp {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.currentWeather {
+    font-size: 2rem;
+    padding-left: 2%;
+}
