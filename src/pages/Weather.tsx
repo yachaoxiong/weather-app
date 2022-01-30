@@ -18,7 +18,6 @@ const Weather = (): JSX.Element => {
 
         const getCurrentWeatherData = () => {
             getWeather(currentCity).then((data) => {
-                console.log(data);
                 const cityTempArray: CityWeather[] = [];
                 for (let i = 0; i < 5; i++) {
                     cityTempArray.push({
